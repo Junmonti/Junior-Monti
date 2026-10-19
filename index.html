@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Portfolio of Junior Monti — web developer, software engineering enthusiast and graphic designer.">
+<title>Junior Monti | Digital Portfolio</title>
+<style>
+:root{--bg:#0a0d14;--panel:#111722;--panel2:#151d2a;--text:#f5f7fb;--muted:#a5b0c0;--line:rgba(255,255,255,.12);--accent:#c8a96b;--accent2:#8ab8ff;--max:1120px}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:radial-gradient(circle at 80% 8%,rgba(83,110,158,.16),transparent 30%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+nav{display:flex;align-items:center;justify-content:space-between;padding:24px 0;border-bottom:1px solid var(--line)}.brand{font-weight:800;letter-spacing:.08em}.brand span{color:var(--accent)}.navlinks{display:flex;gap:24px;color:var(--muted);font-size:.9rem}.navlinks a:hover,.textlink:hover{color:var(--accent)}
+.hero{padding:88px 0 72px;display:grid;grid-template-columns:1.3fr .7fr;gap:48px;align-items:center}.eyebrow{color:var(--accent);font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;font-weight:800}.hero h1{font-size:clamp(2.8rem,7vw,5.6rem);line-height:1.02;letter-spacing:-.06em;margin:18px 0 22px}.hero h1 em{font-style:normal;color:var(--accent)}.intro{font-size:1.08rem;color:var(--muted);max-width:620px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}.btn{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;padding:12px 19px;font-weight:750;font-size:.92rem;border:1px solid var(--line);transition:transform .2s,background .2s}.btn:hover{transform:translateY(-2px)}.primary{background:var(--accent);color:#141414;border-color:var(--accent)}.secondary{background:rgba(255,255,255,.035)}.visual{min-height:320px;border:1px solid var(--line);border-radius:28px;background:linear-gradient(145deg,#192334,#10151f 70%);padding:22px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center}.visual:before{content:"";position:absolute;width:250px;height:250px;border:1px solid rgba(200,169,107,.35);border-radius:50%;right:-70px;top:-65px}.visual:after{content:"";position:absolute;width:190px;height:190px;border:1px solid rgba(138,184,255,.24);border-radius:50%;left:-60px;bottom:-75px}.hero-photo{z-index:1;width:100%;height:100%;min-height:276px;object-fit:cover;object-position:center 38%;border-radius:18px}.visual-label{position:absolute;z-index:2;bottom:18px;left:22px;color:var(--muted);font-size:.76rem;letter-spacing:.12em;text-transform:uppercase}
+section{padding:64px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:28px}.section-head h2{font-size:clamp(1.8rem,4vw,2.7rem);line-height:1.1;letter-spacing:-.04em;margin:8px 0 0}.section-head p{color:var(--muted);max-width:480px;margin:0}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}.card{background:linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.018));border:1px solid var(--line);border-radius:22px;padding:25px}.card h3{margin:0 0 9px;font-size:1.08rem}.card p{margin:0;color:var(--muted)}.skills{display:flex;flex-wrap:wrap;gap:9px;margin-top:18px}.pill{border:1px solid var(--line);background:rgba(255,255,255,.035);border-radius:999px;padding:7px 12px;color:#dce3ed;font-size:.83rem}
+.projects{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.project{border:1px solid var(--line);border-radius:22px;overflow:hidden;background:var(--panel);display:flex;flex-direction:column;min-height:290px}.project-art{height:145px;display:grid;place-items:center;background:linear-gradient(135deg,#1a2a40,#111722);border-bottom:1px solid var(--line);position:relative;overflow:hidden}.project-art:before{content:"";width:105px;height:105px;border:1px solid rgba(200,169,107,.6);transform:rotate(45deg);position:absolute}.project-art span{z-index:1;color:var(--accent);font-size:2rem;font-weight:800}.project-art-image{display:block;padding:0;background:#111722}.project-art-image img{width:100%;height:100%;object-fit:cover;object-position:top center;display:block}.project-body{padding:20px;display:flex;flex-direction:column;flex:1}.project-body .tag{color:var(--accent);font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;font-weight:800}.project-body h3{margin:8px 0;font-size:1.1rem}.project-body p{color:var(--muted);font-size:.91rem;margin:0 0 16px}.project-body .textlink{margin-top:auto;color:#e6d0a2;font-weight:750;font-size:.9rem}.note{font-size:.82rem;color:var(--muted);margin-top:15px}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.service-number{font-size:.75rem;color:var(--accent);letter-spacing:.14em;font-weight:800}.service h3{margin:12px 0 8px}.service p{color:var(--muted);margin:0;font-size:.92rem}
+.contact-box{border:1px solid rgba(200,169,107,.35);border-radius:28px;padding:clamp(24px,5vw,48px);background:linear-gradient(120deg,rgba(200,169,107,.1),rgba(138,184,255,.04));display:grid;grid-template-columns:1.2fr .8fr;gap:28px;align-items:center}.contact-box h2{font-size:clamp(2rem,5vw,3.3rem);line-height:1.05;letter-spacing:-.05em;margin:10px 0 14px}.contact-box p{color:var(--muted);margin:0}.contact-details{display:grid;gap:12px}.contact-details a,.contact-details div{overflow-wrap:anywhere;color:#e4eaf2}.contact-details small{display:block;color:var(--muted);font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;margin-bottom:2px}
+footer{padding:28px 0 38px;border-top:1px solid var(--line);color:var(--muted);font-size:.83rem;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+@media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:60px}.visual{min-height:250px}.about-grid,.contact-box{grid-template-columns:1fr}.projects,.services{grid-template-columns:1fr 1fr}.section-head{align-items:start;flex-direction:column}}
+@media(max-width:540px){.wrap{width:min(var(--max),calc(100% - 28px))}.navlinks{gap:12px;font-size:.8rem}.navlinks a:nth-child(2){display:none}.hero{gap:28px}.projects,.services{grid-template-columns:1fr}.card{padding:20px}section{padding:48px 0}}
+ .whatsapp-float{position:fixed;right:24px;bottom:24px;z-index:20;width:58px;height:58px;display:grid;place-items:center;border-radius:50%;background:#25d366;color:#fff;box-shadow:0 8px 24px rgba(0,0,0,.35);transition:transform .2s,box-shadow .2s}.whatsapp-float:hover{transform:translateY(-3px);box-shadow:0 12px 28px rgba(0,0,0,.42)}.whatsapp-float svg{width:30px;height:30px;fill:currentColor}.whatsapp-float:focus-visible{outline:3px solid #fff;outline-offset:3px}@media(max-width:540px){.whatsapp-float{right:16px;bottom:16px;width:54px;height:54px}}</style>
+</head>
+<body>
+<header class="wrap">
+  <nav aria-label="Main navigation">
+    <a class="brand" href="#home">JM<span>.</span></a>
+    <div class="navlinks"><a href="#about">About</a><a href="#services">Services</a><a href="#projects">Projects</a><a href="#contact">Contact</a></div>
+  </nav>
+</header>
+<main>
+  <section class="wrap hero" id="home">
+    <div>
+      <div class="eyebrow">Digital craft · Code · Design</div>
+      <h1>I build digital<br>experiences with<br><em>purpose.</em></h1>
+      <p class="intro">I'm Junior Monti, a web developer and graphic designer focused on helping businesses show up professionally online through thoughtful websites and visual design.</p>
+      <div class="actions">
+        <a class="btn primary" href="#projects">Explore my work ↘</a>
+        <a class="btn secondary" href="#contact">Let's work together</a>
+      </div>
+    </div>
+    <div class="visual" aria-label="Portrait of Junior Monti">
+      <img class="hero-photo" src="IMAGES/WhatsApp%20Image%202026-06-11%20at%2017.50.36%20(1).jpeg" alt="Junior Monti seated in a living room">
+    </div>
+  </section>
+
+  <section class="wrap" id="about">
+    <div class="section-head"><div><div class="eyebrow">A little about me</div><h2>Creative thinking.<br>Practical solutions.</h2></div><p>I bring together technical curiosity and a designer's eye to create digital work that looks clear, feels intuitive and serves a real business purpose.</p></div>
+    <div class="about-grid">
+      <article class="card"><h3>My approach</h3><p>I care about clear structure, useful experiences, consistent visual identity and making sure the final result works for the people who use it. I enjoy learning, solving problems and turning ideas into something tangible.</p></article>
+      <article class="card"><h3>Tools & skills</h3><p>My current focus is front-end web development, digital design and business-focused online solutions.</p><div class="skills"><span class="pill">HTML5</span><span class="pill">CSS3</span><span class="pill">JavaScript</span><span class="pill">Responsive design</span><span class="pill">Graphic design</span><span class="pill">Branding</span><span class="pill">Website design</span></div></article>
+    </div>
+  </section>
+
+  <section class="wrap" id="projects">
+    <div class="section-head"><div><div class="eyebrow">Selected work</div><h2>Projects that show<br>what I can do.</h2></div><p>This section is ready for your real LinkedIn projects. Replace the draft cards below with verified project names, screenshots, descriptions and links before publishing.</p></div>
+    <div class="projects">
+      <article class="project">
+        <a class="project-art project-art-image" href="https://siyahluma.vercel.app/" target="_blank" rel="noopener" aria-label="Visit the Siyahluma Funeral Directors website"><img src="IMAGES/siyahluma-homepage.jpeg" alt="Screenshot of the Siyahluma Funeral Directors website homepage"></a>
+        <div class="project-body"><div class="tag">Web development</div><h3>Siyahluma Funeral Directors</h3><p>Designed and built a professional website for Siyahluma Funeral Directors using HTML, CSS, and JavaScript.</p><a class="textlink" href="https://siyahluma.vercel.app/" target="_blank" rel="noopener">View live website ↗</a></div>
+      </article>
+      <article class="project">
+        <a class="project-art project-art-image" href="https://icebo-website.vercel.app/" target="_blank" rel="noopener" aria-label="Visit the Icebo Wash Service and Coffee Bar website"><img src="IMAGES/icebo-homepage.jpeg" alt="Screenshot of the Icebo Wash Service and Coffee Bar website homepage"></a>
+        <div class="project-body"><div class="tag">Web development</div><h3>Icebo Wash Service &amp; Coffee Bar</h3><p>Designed and built a polished website bringing Icebo’s car wash and coffee bar together, with clear visuals and an easy-to-use layout. Built with HTML, CSS, and JavaScript.</p><a class="textlink" href="https://icebo-website.vercel.app/" target="_blank" rel="noopener">View live website ↗</a></div>
+      </article>
+      <article class="project">
+        <a class="project-art project-art-image" href="https://i-qunube-shop.vercel.app/#" target="_blank" rel="noopener" aria-label="Visit the iQunube automotive products website"><img src="IMAGES/iqunube-homepage.png" alt="Screenshot of the iQunube automotive website"></a>
+        <div class="project-body"><div class="tag">Web development</div><h3>Automotive Products &amp; Accessories Website</h3><p>Designed a professional website concept for an automotive brand selling roof racks, car trailers, and vehicle accessories. Clear layouts and intuitive navigation help customers explore the range and strengthen the brand’s online presence.</p><a class="textlink" href="https://i-qunube-shop.vercel.app/#" target="_blank" rel="noopener">View live website ↗</a></div>
+      </article>
+    </div>
+    <p class="note">Portfolio draft: these are project categories, not claims of completed work. Replace them with your actual projects before sharing this site with employers or clients.</p>
+  </section>
+
+  <section class="wrap" id="services">
+    <div class="section-head"><div><div class="eyebrow">What I can help with</div><h2>Digital services</h2></div><p>Practical creative and technical support for businesses that want a stronger online presence.</p></div>
+    <div class="services">
+      <article class="card service"><div class="service-number">01 / BUILD</div><h3>Business Websites</h3><p>Clean, responsive websites that explain your services and make it easier for customers to contact you.</p></article>
+      <article class="card service"><div class="service-number">02 / DESIGN</div><h3>Graphic Design</h3><p>Digital visuals, promotional artwork and brand assets designed to communicate clearly and consistently.</p></article>
+      <article class="card service"><div class="service-number">03 / IMPROVE</div><h3>Website Updates</h3><p>Layout improvements, content updates and visual refinements to make an existing website more effective.</p></article>
+    </div>
+  </section>
+
+  <section class="wrap" id="contact">
+    <div class="contact-box">
+      <div><div class="eyebrow">Have a project in mind?</div><h2>Let's make your next idea real.</h2><p>For website projects, design work or opportunities to collaborate, get in touch.</p><div class="actions"><a class="btn primary" href="mailto:juniiormonti@gmail.com">Email me ↗</a><a class="btn secondary" href="https://www.linkedin.com/in/sinomtha-monti-a93727299/" target="_blank" rel="noopener">LinkedIn profile ↗</a></div></div>
+      <div class="contact-details">
+        <div><small>Email</small><a href="mailto:juniiormonti@gmail.com">juniiormonti@gmail.com</a></div>
+        <div><small>Phone</small><a href="tel:+27652615892">065 261 5892</a></div>
+        <div><small>Location</small>South Africa</div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer class="wrap"><span>© <span id="year">2026</span> Junior Monti</span><span>Designed to grow with the work.</span></footer>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<a class="whatsapp-float" href="https://wa.me/27652615892" target="_blank" rel="noopener" aria-label="Chat with Junior Monti on WhatsApp" title="Chat on WhatsApp">
+  <svg viewBox="0 0 32 32" aria-hidden="true"><path d="M19.11 17.53c-.28-.14-1.65-.81-1.91-.9-.26-.1-.45-.14-.64.14-.19.28-.73.9-.9 1.09-.16.19-.33.21-.61.07-.28-.14-1.18-.44-2.25-1.4-.83-.74-1.39-1.65-1.56-1.93-.16-.28-.02-.43.12-.57.13-.12.28-.33.42-.49.14-.16.19-.28.28-.47.1-.19.05-.35-.02-.49-.07-.14-.64-1.54-.88-2.1-.23-.55-.47-.48-.64-.49h-.54c-.19 0-.49.07-.75.35s-.98.96-.98 2.34 1 2.71 1.14 2.9c.14.19 1.97 3 4.77 4.2.67.29 1.19.46 1.6.59.67.21 1.28.18 1.76.11.54-.08 1.65-.67 1.88-1.32.23-.65.23-1.21.16-1.32-.07-.12-.26-.19-.54-.33M16.03 3C8.85 3 3 8.83 3 16c0 2.3.6 4.55 1.74 6.54L3 29l6.63-1.73A13 13 0 0 0 16.02 29C23.2 29 29 23.17 29 16S23.2 3 16.03 3m0 23.84c-2.08 0-4.12-.56-5.9-1.63l-.42-.25-3.94 1.03 1.05-3.84-.27-.43A10.8 10.8 0 0 1 4.9 16c0-6.12 4.99-11.1 11.13-11.1 2.97 0 5.76 1.16 7.86 3.26A11 11 0 0 1 27.15 16c0 6.12-4.99 10.84-11.12 10.84"/></svg>
+</a></body>
+</html>
